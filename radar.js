@@ -309,7 +309,7 @@ function radar_visualization(config) {
               .attr("transform", function(d, i) { return legend_transform(quadrant, ring, i); })
               .attr("class", "legend" + quadrant + ring)
               .attr("id", function(d, i) { return "legendItem" + d.id; })
-              .text(function(d, i) { return d.id + ". " + d.label; })
+              .text(function(d, i) { return d.id + d.team + ". " + d.label; })
               .style("font-family", "Arial, Helvetica")
               .style("font-size", "11")
               .on("mouseover", function(d) { showBubble(d); highlightLegendItem(d); })
